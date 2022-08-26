@@ -12,6 +12,7 @@ import { RecentList } from '../../recent-list';
 import { SettingsButton, SETTINGS_TABS } from '../../settings';
 
 import { AbstractWelcomePage, _mapStateToProps } from './AbstractWelcomePage';
+import NewComponent from './NewComponent';
 import Tabs from './Tabs';
 
 /**
@@ -27,6 +28,7 @@ export const ROOM_NAME_VALIDATE_PATTERN_STR = '^[^?&:\u0022\u0027%#]+$';
  * @augments AbstractWelcomePage
  */
 class WelcomePage extends AbstractWelcomePage {
+
     /**
      * Default values for {@code WelcomePage} component's properties.
      *
@@ -116,7 +118,10 @@ class WelcomePage extends AbstractWelcomePage {
             = this._setAdditionalToolbarContentRef.bind(this);
         this._onTabSelected = this._onTabSelected.bind(this);
         this._renderFooter = this._renderFooter.bind(this);
+
     }
+
+
 
     /**
      * Implements React's {@link Component#componentDidMount()}. Invoked
@@ -185,7 +190,7 @@ class WelcomePage extends AbstractWelcomePage {
                 className = { `welcome ${contentClassName} ${footerClassName}` }
                 id = 'welcome_page'>
                 <div className = 'welcome-watermark'>
-                    <Watermarks defaultJitsiLogoURL = { DEFAULT_WELCOME_PAGE_LOGO_URL } />
+                    <Watermarks defaultJitsiLogoURL = { "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/1707px-NewTux.svg.png" } />
                 </div>
 
                 <div className = 'header'>
@@ -203,7 +208,7 @@ class WelcomePage extends AbstractWelcomePage {
                     <div className = 'header-image' />
                     <div className = 'header-container'>
                         <h1 className = 'header-text-title'>
-                            { t('welcomepage.headerTitle') }
+                           we-meet
                         </h1>
                         <span className = 'header-text-subtitle'>
                             { t('welcomepage.headerSubtitle')}
@@ -242,6 +247,16 @@ class WelcomePage extends AbstractWelcomePage {
                                 type = 'button'>
                                 { t('welcomepage.startMeeting') }
                             </button>
+                            {/* <button
+                                aria-disabled = 'false'
+                                aria-label = 'Start meeting'
+                                className = 'welcome-page-button'
+                                id = 'enter_room_button'
+                                onClick = {this.newFunc}
+                                tabIndex = '0'
+                                type = 'button'>
+                                { t('welcomepage.startMeeting') }
+                            </button> */}
                         </div>
 
                         { _moderatedRoomServiceUrl && (
@@ -305,11 +320,15 @@ class WelcomePage extends AbstractWelcomePage {
      */
     _onFormSubmit(event) {
         event.preventDefault();
-
+        // alert("starting we-meet join")
         if (!this._roomInputRef || this._roomInputRef.reportValidity()) {
             this._onJoin();
         }
     }
+
+    // newFunc = ()=>{
+    //     alert("we-meet")
+    // }
 
     /**
      * Overrides the super to account for the differences in the argument types
@@ -380,6 +399,8 @@ class WelcomePage extends AbstractWelcomePage {
                 </div>
             </div>
         </footer>);
+
+  
     }
 
     /**
