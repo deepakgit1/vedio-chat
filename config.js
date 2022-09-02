@@ -44,7 +44,7 @@ var config = {
     },
 
     // BOSH URL. FIXME: use XEP-0156 to discover it.
-    bosh: '//jitsi-meet.example.com/' + subdir + 'http-bind',
+    bosh: '//remarkable-pixie-914b78.netlify.app/' + subdir + 'http-bind',
 
     // Websocket URL
     // websocket: 'wss://jitsi-meet.example.com/' + subdir + 'xmpp-websocket',
