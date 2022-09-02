@@ -258,7 +258,7 @@ function getDevServerConfig() {
                 warnings: false
             }
         },
-        host: '127.0.0.1',
+        host: 'remarkable-pixie-914b78.netlify.app',
         hot: true,
         proxy: {
             '/': {
