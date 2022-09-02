@@ -28,7 +28,7 @@ var config = {
 
     hosts: {
         // XMPP domain.
-        domain: 'jitsi-meet.example.com',
+        domain: 'remarkable-pixie-914b78.netlify.app',
 
         // When using authentication, domain for guest users.
         // anonymousdomain: 'guest.example.com',
