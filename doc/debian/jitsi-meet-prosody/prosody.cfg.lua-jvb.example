@@ -17,10 +17,10 @@ consider_bosh_secure = true;
 -- by default prosody 0.12 sends cors headers, if you want to disable it uncomment the following (the config is available on 0.12.1)
 --http_cors_override = {
 --    bosh = {
---        enabled = false;
+--        enabled = true;
 --    };
 --    websocket = {
---        enabled = false;
+--        enabled = true;
 --    };
 --}
 
