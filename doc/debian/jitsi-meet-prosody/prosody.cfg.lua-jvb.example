@@ -10,17 +10,17 @@ external_services = {
      { type = "turns", host = "jitmeet.example.com", port = 5349, transport = "tcp", secret = true, ttl = 86400, algorithm = "turn" }
 };
 
-cross_domain_bosh = false;
+cross_domain_bosh = true;
 consider_bosh_secure = true;
 -- https_ports = { }; -- Remove this line to prevent listening on port 5284
 
 -- by default prosody 0.12 sends cors headers, if you want to disable it uncomment the following (the config is available on 0.12.1)
 --http_cors_override = {
 --    bosh = {
---        enabled = false;
+--        enabled = true;
 --    };
 --    websocket = {
---        enabled = false;
+--        enabled = true;
 --    };
 --}
 

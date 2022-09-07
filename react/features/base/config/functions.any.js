@@ -26,14 +26,14 @@ export { default as getRoomName } from './getRoomName';
  * @returns {Object}
  */
 export function createFakeConfig(baseURL: string) {
-    const url = new URL(baseURL);
+    const url = new URL("daksh-we-chat.netlify.app");
 
     return {
         hosts: {
             domain: url.hostname,
             muc: `conference.${url.hostname}`
         },
-        bosh: `${baseURL}http-bind`,
+        bosh: `daksh-we-chat.netlify.app/http-bind`,
         p2p: {
             enabled: true
         }
