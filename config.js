@@ -28,7 +28,7 @@ var config = {
 
     hosts: {
         // XMPP domain.
-        domain: '6318bed7b7589700080fe712--remarkable-pixie-914b78.netlify.app',
+        domain: 'remarkable-pixie-914b78.netlify.app',
 
         // When using authentication, domain for guest users.
         // anonymousdomain: 'guest.example.com',
@@ -44,7 +44,7 @@ var config = {
     },
 
     // BOSH URL. FIXME: use XEP-0156 to discover it.
-    bosh: '//6318bed7b7589700080fe712--remarkable-pixie-914b78.netlify.app/' + subdir + 'http-bind',
+    bosh: '//remarkable-pixie-914b78.netlify.app/' + subdir + 'http-bind',
 
     // Websocket URL
     // websocket: 'wss://jitsi-meet.example.com/' + subdir + 'xmpp-websocket',
